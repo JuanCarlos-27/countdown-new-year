@@ -1,0 +1,30 @@
+---
+interface Props {
+  value?: number;
+  label: string;
+  id: string;
+}
+
+const { id, value, label } = Astro.props;
+---
+
+<article id={id}>
+  <h2>{value}</h2>
+  <p>{label}</p>
+</article>
+
+<style>
+  article {
+    color: #fefefe;
+  }
+  h2 {
+    font-size: 8rem;
+    line-height: 1;
+  }
+
+  @media screen and (width <= 710px) {
+    h2 {
+      font-size: 3rem;
+    }
+  }
+</style>
